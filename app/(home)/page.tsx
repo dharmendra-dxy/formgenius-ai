@@ -1,9 +1,14 @@
-import React from 'react'
+import Container from "@/components/general/Container";
+import HeroSection from "@/components/home-page/HeroSection";
+import SubscriptionSection from "@/components/home-page/SubscriptionSection";
 
-const page = () => {
+export default function Home() {
   return (
-    <div>page</div>
-  )
+    <main>
+      <Container>
+        <HeroSection/>
+        <SubscriptionSection/>
+      </Container>
+    </main>
+  );
 }
-
-export default page
