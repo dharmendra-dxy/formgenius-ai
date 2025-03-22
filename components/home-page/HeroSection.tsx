@@ -1,20 +1,8 @@
 import React from 'react'
 import GenerateForm from '../general/GenerateForm'
+import { suggestionText } from '@/lib/constants';
+import { SuggestionText } from '@/lib/types';
 
-const suggestionText= [
-    {
-      label: "Job Application",
-      description: "Develop a basic job application form that serves as a one-page solution form collecting essential information from applicants.",
-    },
-    {
-      label: "Registration Form",
-      description: "Create a course registration form suitable form any scheool or instituition.",
-    },
-    {
-      label: "Feedback Form",
-      description: "Create a client feedback form to gather valuable insights from any clients.",
-    },
-  ];
 
 const HeroSection = () => {
   return (
@@ -37,12 +25,12 @@ const HeroSection = () => {
         {/* suggestion buttons: */}
         <div className=' flex flex-wrap items-center justify-center gap-4 mt-8'>
         {
-            suggestionText.map((item) => (
+            suggestionText.map((item:SuggestionText) => (
                 <button 
-                key={item.label}
+                key={item?.label}
                 className='border border-gray-300 px-4 py-1 rounded-full hover:bg-black hover:text-white w-fit h-10'
                 >
-                    {item.label}
+                    {item?.label}
                 </button>
             ))
         }
